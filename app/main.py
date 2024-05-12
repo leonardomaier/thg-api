@@ -2,7 +2,7 @@ import requests
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from urllib.parse import urlencode
-from utils import extract_population_by_year
+from .utils import extract_population_by_year
 
 app = FastAPI()
 
@@ -15,6 +15,10 @@ app.add_middleware(
 )
 
 API_URL = 'https://datausa.io/api/data'
+
+@app.get("/")
+async def home():
+    return { 'message': "API is up and running" }
 
 @app.get("/population")
 async def get_population():
