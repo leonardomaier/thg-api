@@ -2,6 +2,19 @@
 
 This documentation provides an overview of the API endpoints.
 
+## How to run
+
+If you have Docker installed, just run:
+
+```bash
+docker-compose -f docker-compose.yml up --build
+```
+Otherwise you need to make sure you have `fastapi` (`pip install fastapi`) CLI installed and then run:
+
+```bash
+fastapi run app/main.py --port 80
+```
+
 ## Overview
 
 The API offers two endpoints:
@@ -20,11 +33,6 @@ The API offers two endpoints:
 
 #### Description
 Retrieves population statistics by state.
-
-#### Request Parameters
-- `drilldowns`: Specifies the level of detail for the data (e.g., 'State').
-- `measures`: Specifies the type of measure to retrieve (e.g., 'Population').
-- `geo`: Specifies the geographic regions to retrieve data for.
 
 #### Response
 ```json
@@ -57,12 +65,6 @@ Retrieves population statistics by state.
 
 #### Description
 Retrieves vehicles available per household.
-
-#### Request Parameters
-- `measure`: Specifies the type of measures to retrieve (e.g., 'Commute Means by Gender').
-- `geo`: Specifies the geographic regions to retrieve data for.
-- `drilldowns`: Specifies the level of detail for the data (e.g., 'Vehicles Available').
-- `year`: Specifies the year for which data is requested.
 
 #### Response
 ```json
