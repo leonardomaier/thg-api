@@ -4,16 +4,17 @@ This documentation provides an overview of the API endpoints.
 
 ## How to run
 
-If you have Docker installed, just run:
+If you have Docker installed, just run the command below in the root folder:
 
 ```bash
 docker-compose -f docker-compose.yml up --build
 ```
-Otherwise you need to make sure you have `fastapi` (`pip install fastapi`) CLI installed and then run:
+Otherwise you need to make sure you have `fastapi` (`pip install fastapi`) CLI installed and then run in the root folder:
 
 ```bash
 fastapi run app/main.py --port 80
 ```
+The API should be available at `http://localhost:80`
 
 ## Overview
 
